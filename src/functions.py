@@ -59,12 +59,14 @@ def get_card_number_to(dictionary):
 
 
 def get_amount(amount_info):
+    """Функция возвращает сумму и валюту конкретной операции"""
     amount = amount_info['amount']
     currency = amount_info['currency']['name']
     return f'{amount} {currency}'
 
 
 def print_bank_info(operation_info):
+    """Функция печатает необходимую информацию, согласно заданию"""
     print(f'{date_operations(operation_info)} {operation_info["description"]}\n'
           f'{get_card_number_from(operation_info)} -> {get_card_number_to(operation_info)}\n'
           f'{get_amount(operation_info["operationAmount"])}\n')
